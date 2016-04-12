@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @link.slug %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @link.destination %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @link.count %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
