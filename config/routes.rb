@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :links
+  resources :links, only: [:index, :show, :create, :new]
   get '/:id' => 'links#show'
   get '/report' => 'links#index'
 

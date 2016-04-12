@@ -1,5 +1,4 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: [:edit, :update, :destroy]
 
   # GET /links
   # GET /links.json
@@ -36,19 +35,10 @@ class LinksController < ApplicationController
     @link = Link.new
   end
 
-  # GET /links/1/edit
-  def edit
-  end
-
 
 
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_link
-      @link = Link.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
       params.require(:link).permit(:slug, :destination, :count)
